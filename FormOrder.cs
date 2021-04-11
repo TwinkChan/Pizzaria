@@ -98,7 +98,6 @@ namespace pizzaria
         }
         #endregion
 
-        //textBoxSummDiscount.Text = Convert.ToString(cost); что бы не потерять!
         #region drink
         private void checkBoxCola_CheckedChanged(object sender, EventArgs e)
         {
