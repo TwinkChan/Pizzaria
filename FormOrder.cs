@@ -97,7 +97,7 @@ namespace pizzaria
             textBoxSumm.Text = Convert.ToString(cost);
         }
         #endregion
-
+        
         #region drink
         private void checkBoxCola_CheckedChanged(object sender, EventArgs e)
         {
@@ -160,5 +160,60 @@ namespace pizzaria
             result = cost - result;
             textBoxSummDiscount.Text = Convert.ToString(result);
         }
+
+        #region Special
+
+        private void checkBoxSpecial_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSpecial.Checked == true)
+            {
+                cost = cost + 748;
+            }
+            else
+            {
+                cost = cost - 748;
+            }
+            textBoxSumm.Text = Convert.ToString(cost);
+        }
+
+        private void checkBoxSpecial2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSpecial2.Checked == true)
+            {
+                cost = cost + 520;
+            }
+            else
+            {
+                cost = cost - 520;
+            }
+            textBoxSumm.Text = Convert.ToString(cost);
+        }
+
+        private void checkBoxSpecial3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSicilia.Checked == true)
+            {
+                cost = cost + 510;
+            }
+            else
+            {
+                cost = cost - 510;
+            }
+            textBoxSumm.Text = Convert.ToString(cost);
+        }
+
+        private void checkBoxSpecial4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSicilia.Checked == true)
+            {
+                cost = cost + 179;
+            }
+            else
+            {
+                cost = cost - 179;
+            }
+            textBoxSumm.Text = Convert.ToString(cost);
+        }
+        #endregion
     }
 }

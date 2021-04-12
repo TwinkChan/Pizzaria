@@ -42,27 +42,34 @@
             this.checkBoxCoffe = new System.Windows.Forms.CheckBox();
             this.checkBoxCola = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxSumm = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxDiscount = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxSummDiscount = new System.Windows.Forms.TextBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonOrder = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxDiscount = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxSumm = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tabPageSpecially = new System.Windows.Forms.TabPage();
+            this.checkBoxSpecial = new System.Windows.Forms.CheckBox();
+            this.checkBoxSpecial2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSpecial3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSpecial4 = new System.Windows.Forms.CheckBox();
             this.tabControlProduct.SuspendLayout();
             this.tabPageFood.SuspendLayout();
             this.tabPageDrink.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPageSpecially.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlProduct
             // 
             this.tabControlProduct.Controls.Add(this.tabPageFood);
             this.tabControlProduct.Controls.Add(this.tabPageDrink);
+            this.tabControlProduct.Controls.Add(this.tabPageSpecially);
             this.tabControlProduct.Location = new System.Drawing.Point(12, 12);
             this.tabControlProduct.Name = "tabControlProduct";
             this.tabControlProduct.SelectedIndex = 0;
@@ -215,6 +222,80 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Общий заказ";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(625, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "руб.";
+            // 
+            // textBoxSumm
+            // 
+            this.textBoxSumm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSumm.Location = new System.Drawing.Point(595, 39);
+            this.textBoxSumm.Name = "textBoxSumm";
+            this.textBoxSumm.ReadOnly = true;
+            this.textBoxSumm.Size = new System.Drawing.Size(36, 13);
+            this.textBoxSumm.TabIndex = 7;
+            this.textBoxSumm.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(446, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Сумма заказа без скидки:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(378, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "руб.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(168, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Сумма заказа с учётом скидки:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(123, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "%";
+            // 
+            // textBoxDiscount
+            // 
+            this.textBoxDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDiscount.Location = new System.Drawing.Point(97, 39);
+            this.textBoxDiscount.Name = "textBoxDiscount";
+            this.textBoxDiscount.Size = new System.Drawing.Size(26, 13);
+            this.textBoxDiscount.TabIndex = 2;
+            this.textBoxDiscount.TextChanged += new System.EventHandler(this.textBoxDiscount_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Введите скидку:";
+            // 
             // textBoxSummDiscount
             // 
             this.textBoxSummDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -223,7 +304,7 @@
             this.textBoxSummDiscount.ReadOnly = true;
             this.textBoxSummDiscount.Size = new System.Drawing.Size(41, 13);
             this.textBoxSummDiscount.TabIndex = 0;
-            this.textBoxSummDiscount.Text = "000.00";
+            this.textBoxSummDiscount.Text = "0";
             // 
             // buttonClose
             // 
@@ -245,79 +326,62 @@
             this.buttonOrder.UseVisualStyleBackColor = true;
             this.buttonOrder.Click += new System.EventHandler(this.buttonOrder_Click);
             // 
-            // label1
+            // tabPageSpecially
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Введите скидку:";
+            this.tabPageSpecially.Controls.Add(this.checkBoxSpecial4);
+            this.tabPageSpecially.Controls.Add(this.checkBoxSpecial3);
+            this.tabPageSpecially.Controls.Add(this.checkBoxSpecial2);
+            this.tabPageSpecially.Controls.Add(this.checkBoxSpecial);
+            this.tabPageSpecially.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSpecially.Name = "tabPageSpecially";
+            this.tabPageSpecially.Size = new System.Drawing.Size(768, 279);
+            this.tabPageSpecially.TabIndex = 2;
+            this.tabPageSpecially.Text = "Спецпредложения";
+            this.tabPageSpecially.UseVisualStyleBackColor = true;
             // 
-            // textBoxDiscount
+            // checkBoxSpecial
             // 
-            this.textBoxDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDiscount.Location = new System.Drawing.Point(97, 39);
-            this.textBoxDiscount.Name = "textBoxDiscount";
-            this.textBoxDiscount.Size = new System.Drawing.Size(26, 13);
-            this.textBoxDiscount.TabIndex = 2;
-            this.textBoxDiscount.TextChanged += new System.EventHandler(this.textBoxDiscount_TextChanged);
+            this.checkBoxSpecial.AutoSize = true;
+            this.checkBoxSpecial.Location = new System.Drawing.Point(9, 13);
+            this.checkBoxSpecial.Name = "checkBoxSpecial";
+            this.checkBoxSpecial.Size = new System.Drawing.Size(264, 17);
+            this.checkBoxSpecial.TabIndex = 0;
+            this.checkBoxSpecial.Text = "Комбо из 2 пипирони и 2 coca-cola 0,5л 748руб";
+            this.checkBoxSpecial.UseVisualStyleBackColor = true;
+            this.checkBoxSpecial.CheckedChanged += new System.EventHandler(this.checkBoxSpecial_CheckedChanged);
             // 
-            // label2
+            // checkBoxSpecial2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(123, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "%";
+            this.checkBoxSpecial2.AutoSize = true;
+            this.checkBoxSpecial2.Location = new System.Drawing.Point(9, 36);
+            this.checkBoxSpecial2.Name = "checkBoxSpecial2";
+            this.checkBoxSpecial2.Size = new System.Drawing.Size(281, 17);
+            this.checkBoxSpecial2.TabIndex = 1;
+            this.checkBoxSpecial2.Text = "Комбо Корбанара + 2 Сока (на выбор) 0,4л 520руб";
+            this.checkBoxSpecial2.UseVisualStyleBackColor = true;
+            this.checkBoxSpecial2.CheckedChanged += new System.EventHandler(this.checkBoxSpecial2_CheckedChanged);
             // 
-            // label3
+            // checkBoxSpecial3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Сумма заказа с учётом скидки:";
+            this.checkBoxSpecial3.AutoSize = true;
+            this.checkBoxSpecial3.Location = new System.Drawing.Point(9, 59);
+            this.checkBoxSpecial3.Name = "checkBoxSpecial3";
+            this.checkBoxSpecial3.Size = new System.Drawing.Size(288, 17);
+            this.checkBoxSpecial3.TabIndex = 2;
+            this.checkBoxSpecial3.Text = "Комбо Сицилийская и Маргарита + Fanta 1л 510руб";
+            this.checkBoxSpecial3.UseVisualStyleBackColor = true;
+            this.checkBoxSpecial3.CheckedChanged += new System.EventHandler(this.checkBoxSpecial3_CheckedChanged);
             // 
-            // label4
+            // checkBoxSpecial4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(378, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "руб.";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(446, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Сумма заказа без скидки:";
-            // 
-            // textBoxSumm
-            // 
-            this.textBoxSumm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSumm.Location = new System.Drawing.Point(595, 39);
-            this.textBoxSumm.Name = "textBoxSumm";
-            this.textBoxSumm.ReadOnly = true;
-            this.textBoxSumm.Size = new System.Drawing.Size(36, 13);
-            this.textBoxSumm.TabIndex = 7;
-            this.textBoxSumm.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(625, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "руб.";
+            this.checkBoxSpecial4.AutoSize = true;
+            this.checkBoxSpecial4.Location = new System.Drawing.Point(9, 82);
+            this.checkBoxSpecial4.Name = "checkBoxSpecial4";
+            this.checkBoxSpecial4.Size = new System.Drawing.Size(365, 17);
+            this.checkBoxSpecial4.TabIndex = 3;
+            this.checkBoxSpecial4.Text = "Комбо 5 пончиков с начинкой (на выбор) + Капучино 300мл 179руб";
+            this.checkBoxSpecial4.UseVisualStyleBackColor = true;
+            this.checkBoxSpecial4.CheckedChanged += new System.EventHandler(this.checkBoxSpecial4_CheckedChanged);
             // 
             // FormOrder
             // 
@@ -339,6 +403,8 @@
             this.tabPageDrink.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPageSpecially.ResumeLayout(false);
+            this.tabPageSpecially.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +435,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDiscount;
+        private System.Windows.Forms.TabPage tabPageSpecially;
+        private System.Windows.Forms.CheckBox checkBoxSpecial4;
+        private System.Windows.Forms.CheckBox checkBoxSpecial3;
+        private System.Windows.Forms.CheckBox checkBoxSpecial2;
+        private System.Windows.Forms.CheckBox checkBoxSpecial;
     }
 }
